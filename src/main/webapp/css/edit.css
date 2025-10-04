@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
+    opacity: 0.95;
+}
+
+.info-banner {
+    background: #e8f5e9;
+    padding: 15px 30px;
+    border-left: 4px solid #66bb6a;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.info-banner p {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.info-banner span {
+    color: #1b5e20;
+    font-weight: 700;
+}
+
+.form-section {
+    padding: 20px 30px 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2e7d32;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.form-group label span.required {
+    color: #d32f2f;
+    margin-left: 3px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s;
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.1);
+}
+
+.form-group input:disabled {
+    background: #f5f5f5;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+    width: auto;
+    cursor: pointer;
+    accent-color: #66bb6a;
+}
+
+.radio-option label {
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.form-hint {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.form-note {
+    font-size: 0.85em;
+    color: #ff9800;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-update {
+    background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+    color: white;
+}
+
+.btn-update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 187, 106, 0.4);
+}
+
+.btn-cancel {
+    background: #f5f5f5;
+    color: #2e7d32;
+    border: 2px solid #c8e6c9;
+}
+
+.btn-cancel:hover {
+    background: #e8f5e9;
+}
+
+.btn-delete {
+    background: white;
+    color: #d32f2f;
+    border: 2px solid #ffcdd2;
+}
+
+.btn-delete:hover {
+    background: #ffebee;
+    border-color: #ef5350;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f1f8f4;
+    color: #2e7d32;
+    font-size: 0.9em;
+    border-top: 1px solid #c8e6c9;
+}
+
+footer a {
+    color: #66bb6a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .info-banner {
+        margin: 15px 20px;
+        padding: 12px 15px;
+    }
+
+    .form-section {
+        padding: 20px 20px 30px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

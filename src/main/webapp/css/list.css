@@ -1,0 +1,256 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
+    opacity: 0.95;
+}
+
+.search-section {
+    padding: 25px 20px;
+    background: #f1f8f4;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+img {
+    max-height: 100px;
+    max-width: 100px;
+}
+.search-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2e7d32;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.search-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s;
+    background: white;
+}
+
+.search-group input:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.1);
+}
+
+.search-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 24px;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 187, 106, 0.3);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f1f8f4;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #2e7d32;
+    border-bottom: 2px solid #c8e6c9;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e8f5e9;
+    color: #212529;
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #f1f8f4;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.badge-nam {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge-nu {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.status-active {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.status-inactive {
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.pagination a:hover {
+    background-color: #66bb6a;
+    color: white;
+    border-color: #66bb6a;
+}
+
+.pagination a.active {
+    background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+    color: white;
+    border-color: #66bb6a;
+}
+
+.pagination .prev,
+.pagination .next {
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.pagination .dots {
+    padding: 10px 8px;
+    border: none;
+    color: #6c757d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f1f8f4;
+    color: #2e7d32;
+    font-size: 0.9em;
+    border-top: 1px solid #c8e6c9;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-group {
+        min-width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .pagination a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .pagination .prev,
+    .pagination .next {
+        padding: 8px 16px;
+    }
+}
+
