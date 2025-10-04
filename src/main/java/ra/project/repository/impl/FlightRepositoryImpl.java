@@ -60,6 +60,20 @@ public class FlightRepositoryImpl implements IFlightRepository {
             session.close();
         }
     }
+    @Override
+    public void updateFlight(Flight flight) {
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+        try {
+            session.update(flight);
+            tx.commit();
+        } catch (Exception e) {
+            tx.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
 
     @Override
     public void deleteFlight(int id) {

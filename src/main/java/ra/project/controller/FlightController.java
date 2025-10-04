@@ -110,6 +110,7 @@ public class FlightController {
             return "editFlight";
         }
         Flight flight = new Flight();
+        flight.setId(flightDto.getId());
         flight.setFlightName(flightDto.getFlightName());
         flight.setDestination(flightDto.getDestination());
         flight.setDeparture_date(flightDto.getDeparture_date());
@@ -121,7 +122,7 @@ public class FlightController {
             String url = cloudService.uploadFileToCloudinary(flightDto.getTravel_image());
             flight.setTravel_image(url);
         }
-        flightService.saveFlight(flight);
+        flightService.updateFlight(flight);
         return "redirect:/flights";
 
     }

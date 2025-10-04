@@ -13,4 +13,5 @@ public interface IFlightService {
     Flight getFlightById(int id);
     void initData();
     int totalPages(int size);
+    void updateFlight(Flight flight);
 }
